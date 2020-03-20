@@ -1,5 +1,7 @@
 {
   "name": "TabsPipe",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
