@@ -15,19 +15,19 @@
 
   <ion-item>
     <ion-label position="floating">Nombre: </ion-label>
-    <ion-input [(ngModel)]="n" #nombres autocomplete></ion-input>
+    <ion-input [(ngModel)]="n"  autocomplete></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Correo: </ion-label>
-    <ion-input [(ngModel)]="co" #correo></ion-input>
+    <ion-input [(ngModel)]="co"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Telefono: </ion-label>
-    <ion-input [(ngModel)]="t" #tele ></ion-input>
+    <ion-input [(ngModel)]="t" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Notas: </ion-label>
-    <ion-input [(ngModel)]="no" #not></ion-input>
+    <ion-input [(ngModel)]="no"></ion-input>
   </ion-item>
   <ion-list  >
     <ion-radio-group [(ngModel)]='lista' >
@@ -47,6 +47,9 @@
     </ion-radio-group>
   </ion-list>
 
-  <ion-button expand="full" (click)="this.Servicio.addperson(nombres.value,correo.value,tele.value,not.value)"> <ion-icon name="add-circle-outline" ></ion-icon></ion-button>
+  <ionic-calendar-date-picker #fec  (onSelect)="dateSelected($event)" [backgroundStyle]="{'background-color': '#000000'}"></ionic-calendar-date-picker>	
+
+
+  <ion-button expand="full" (click)="enviar()" > <ion-icon name="add-circle-outline" ></ion-icon></ion-button>
 
 </ion-content>

@@ -27,7 +27,8 @@ export class ServiceService {
 
 
   
-  addperson(strnombre?: string,strcorreo?: string,strtele?: string,strnot?: string){
+  addperson(strnombre?: string,strcorreo?: string,strtele?: string,strnot?: string,strfec?: any){
+    console.log(strfec)
     if(this.lista==="1"){
       this.blnSexo=true;
     }else if(this.lista==="2"){
@@ -51,10 +52,9 @@ export class ServiceService {
       strcorreo,
       strtele,
       strnot,
-      sexo
+      sexo,
+      strfec
       
-    
-
     };
 
     this.cont=this.cont+1;

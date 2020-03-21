@@ -37,7 +37,14 @@ Admin Person (Service)    </ion-title>
       <ion-card-header >
 
         <ion-card-title>Nombre: {{nombrew['strnombre']}}</ion-card-title>
-        <ion-card-subtitle>Telefono:  {{nombrew['strtele']}}<br></ion-card-subtitle>
+        <ion-card-subtitle>
+          <ion-item>
+            Telefono:  {{nombrew['strtele']}}<br>
+          </ion-item>
+          <ion-item>
+              {{nombrew['strfec']|fecha}}
+          </ion-item>
+        </ion-card-subtitle>
         
       </ion-card-header>
       <ion-card-content *ngIf="this.Servicio.ping==1">

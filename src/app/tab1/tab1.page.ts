@@ -23,8 +23,17 @@ export class Tab1Page {
   genero:string;
   genero2:boolean;
   lista: string;
+  fecha: any;
 
   constructor(public Servicio : ServiceService) {}
 
-  
+  dateSelected(fec:Date)
+  {
+    this.fecha=fec;
+  }
+
+
+  enviar(){
+    this.Servicio.addperson(this.n,this.co,this.t,this.no,this.fecha);
+  }
 }
